@@ -17,8 +17,9 @@ HTTP/2, standardized in 2015, was developed by the Internet Engineering Task For
 3. <b>Stream Prioritization:</b> With stream prioritization, clients can hint at the importance of resources, enabling servers to deliver higher-priority content faster, which is crucial for rendering critical page elements.
 4. <b>Server Push:</b> Server push enables servers to proactively send resources to the client’s cache before they are explicitly requested, further reducing perceived latency.
 5. <b>Header Compression (HPACK):</b> HTTP/2 employs HPACK compression to reduce header size and combat redundancy across requests.
-6. <b>Protocol Negotiation:</b> Clients and servers use either the ALPN extension in TLS or Upgrade header in plain HTTP to negotiate the use of HTTP/2.
+6. <b>Protocol Negotiation:</b> Clients and servers use either the ALPN extension in TLS or the Upgrade header in plain HTTP to negotiate the use of HTTP/2.
 7. <b>Security (TLS Requirement):</b> While not mandated by the protocol itself, major browsers require TLS when using HTTP/2, indirectly enforcing encrypted connections.
+<img src="https://miro.medium.com/v2/resize:fit:648/0*MfSxvU3VHy5gLnjE">
 
 <h3>Performance Comparison</h3>
 
