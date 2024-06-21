@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <script>
+      // comparing two json have the same properties without order.
+
+      var obj1 = { name: "Person1", age: 5 };
+      var obj2 = { age: 5, name: "Person1" };
+
+      var prop1 = Object.getOwnPropertyNames(obj1);
+      var prop2 = Object.getOwnPropertyNames(obj2);
+
+      for (var i = 0; i < prop1.length; i++) {
+        var prop = prop1[i];
+        if (obj1[prop] !== obj2[prop]) {
+          console.log("false");
+        }
+      }
+
+      console.log("true");
+    </script>
+  </body>
+</html>
