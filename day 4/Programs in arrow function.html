@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Do the below programs in arrow functions</title>
+</head>
+
+<body>
+    <script>
+        // 1. Print Odd Numbers in an Array?
+
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var oddNumbers = numbers.filter((num) => num % 2 !== 0);
+        console.log(oddNumbers);
+
+        // 2. Converts all strings to title Caps in a String Array?
+
+        var stringArray = ["i am", "new to", "javascript"];
+        var titleCaseArray = stringArray.map(str => str.charAt(0).toUpperCase() + str.slice(1));
+        console.log(titleCaseArray);
+
+        // 3. Sum of all numbers in an Array?
+
+        var nums = [10, 20, 30, 40, 50];
+        var sum = nums.reduce((acc, curr) => acc + curr, 0);
+        console.log(sum);
+
+        // 4. Return all prime numbers in an Array?
+
+        var numbersToCheck = [2, 3, 5, 7, 10, 11, 13];
+        var isPrime = num => {
+            for (var i = 2; i < num; i++) {
+                if (num % i === 0) return false;
+            }
+            return num > 1;
+        };
+        var primeNumbers = numbersToCheck.filter(isPrime);
+        console.log(primeNumbers);
+
+        // 5. Return all Palindromes in an Array?
+
+        var words = ["level", "hello", "madam", "world"];
+        var isPalindrome = str => str === str.split("").reverse().join("");
+        var palindromes = words.filter(isPalindrome);
+        console.log(palindromes);
+    </script>
+</body>
+
+</html>

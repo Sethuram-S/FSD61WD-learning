@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Third Webpage</title>
+</head>
+
+<body>
+  <script>
+    // use the same rest countries and print all countries names, regions, sub-region and populations
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+    xhr.send();
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        var response = JSON.parse(xhr.responseText);
+        response.forEach((country) => {
+          console.log(`Country: ${country.name.common}`);
+          console.log(`Region: ${country.region}`);
+          console.log(`Sub-region: ${country.subregion}`);
+          console.log(`Population: ${country.population}`);
+          console.log("------------------------");
+        });
+      } else {
+        console.log("Failed to load data");
+      }
+    };
+
+    xhr.onerror = function () {
+      console.log("Error");
+    };
+  </script>
+</body>
+
+</html>
