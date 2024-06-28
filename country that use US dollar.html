@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country that uses US dollars as currency</title>
+  </head>
+  <body>
+    <script>
+      // Print the country that uses US dollars as currency.
+
+      fetch("https://restcountries.com/v3.1/all")
+        .then((response) => response.json())
+        .then((data) => {
+          const usdCountries = data.filter((country) => country.currencies.USD);
+          console.log(usdCountries);
+        });
+    </script>
+  </body>
+</html>

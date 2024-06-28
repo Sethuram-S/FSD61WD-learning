@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total population of countries</title>
+  </head>
+  <body>
+    <script>
+      // Print the total population of countries using reduce method
+      fetch("https://restcountries.com/v3.1/all")
+        .then((response) => response.json())
+        .then((data) => {
+          const totalPopulation = data.reduce(
+            (acc, country) => acc + country.population,
+            0
+          );
+          console.log(`Total population: ${totalPopulation}`);
+        });
+    </script>
+  </body>
+</html>
