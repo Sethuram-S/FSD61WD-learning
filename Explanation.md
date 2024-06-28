@@ -1,7 +1,7 @@
 <center>
     <h1>Array Method</h1>
 </center>
-<br>
+
 <h3>Solving problems using array functions on rest countries data (https://restcountries.com/v3.1/all).</h3>
 
 <h4>Get all the countries from Asia continent /region using Filter method</h4>
